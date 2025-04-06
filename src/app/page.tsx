@@ -30,7 +30,7 @@ export default function Home() {
           className="space-y-6"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mt-4">
-            Happy Birthday nukul! 🎉
+            Happy Birthday mayank! 🎉
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
