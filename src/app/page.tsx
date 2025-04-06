@@ -81,7 +81,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-4 text-lg text-gray-700">
-            <p>Wishing you:</p>
+            <p>Wishing you::</p>
             <ul className="space-y-2">
               <motion.li
                 initial={{ x: -50, opacity: 0 }}
