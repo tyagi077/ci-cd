@@ -22,18 +22,10 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-            # Change to project directory
-            cd ~/ci-cd
-            
-            # Pull the latest changes
-            git init  
+            cd ci-cd
             git pull origin main
-            
-            # Install dependencies
             npm install
-            npm run build  
-            
-            # Restart PM2 processes (adjust the app name if necessary)
-             pm2 restart 0
+            npm run build
+            pm2 restart ci-cd
             
           
