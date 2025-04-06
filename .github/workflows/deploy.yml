@@ -22,6 +22,14 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-           cd ci-cd
-           ls
-           npm run start
+            curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+
+            # Verify installation
+            node -v
+            npm -v
+
+            # Change directory to your app and start
+            cd ci-cd
+            npm install
+            npm run start
