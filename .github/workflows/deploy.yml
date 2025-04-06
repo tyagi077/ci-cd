@@ -22,9 +22,7 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-            curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-            sudo apt-get install -y nodejs
-            
             cd ci-cd
+            git pull origin main
             npm install
-            npm run start
+            pm2 restart all
