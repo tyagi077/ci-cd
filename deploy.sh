@@ -1,5 +1,13 @@
+#!/bin/bash
+
+# Ensure nvm is available for non-interactive shell
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This makes nvm work
+
+# Use nvm to load the right Node.js version
+nvm use node
+
 cd ci-cd
-git pull origin main
-/home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm install
-/home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm run build
-/home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm run start
+npm install
+npm run build
+npm run start
