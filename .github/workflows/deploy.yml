@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
-       
+
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1
         with:
@@ -22,8 +22,19 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-            cd ci-cd
+            # Change to project directory
+            cd ~/ci-cd
+            
+            # Pull the latest changes
             git pull origin main
+            
+            # Install dependencies
             npm install
-            npm install -g pm2
-            pm2 restart all
+            
+            # Install PM2 globally (with sudo if necessary)
+            sudo npm install -g pm2
+            
+            # Restart PM2 processes (adjust the app name if necessary)
+            pm2 restart ci-cd-app || pm2 start npm --name "ci-cd-app" -- start
+            
+          
