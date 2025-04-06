@@ -26,6 +26,7 @@ jobs:
             cd ~/ci-cd
             
             # Pull the latest changes
+            git init  
             git pull origin main
             
             # Install dependencies
