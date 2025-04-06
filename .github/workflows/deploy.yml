@@ -35,6 +35,6 @@ jobs:
             sudo npm install -g pm2
             
             # Restart PM2 processes (adjust the app name if necessary)
-            pm2 restart ci-cd-app || pm2 start npm --name "ci-cd-app" -- start
+             pm2 start npm --name "ci-cd-app" -- start
             
           
