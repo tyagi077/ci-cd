@@ -1,5 +1,4 @@
 cd ci-cd
-git pull
-npm install
-npm run build
-npm run start
+/home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm install
+/home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm run build
+/home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm run start
