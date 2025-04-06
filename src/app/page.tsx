@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Cake, Heart, Stars, Music, PartyPopper } from 'lucide-react';
+import { Cake, Heart, Stars, PartyPopper } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -117,7 +117,7 @@ export default function Home() {
             className="pt-6"
           >
             <p className="text-xl text-gray-600 italic">
-              "May this special day bring you as much joy as you bring to others!"
+              May this special day bring you as much joy as you bring to others!
             </p>
           </motion.div>
         </motion.div>
