@@ -22,9 +22,9 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-            source ~/.bashrc
-            echo "Node version: $(node -v)"
-            echo "NPM version: $(npm -v)"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            nvm install --lts
             cd ci-cd
             git pull origin main
             npm install
