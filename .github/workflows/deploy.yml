@@ -17,16 +17,15 @@
         - name: executing remote ssh commands using ssh key
           uses: appleboy/ssh-action@v1
           with:
-            host: 13.49.246.72
+            host: 16.171.200.47
             username: ubuntu
             key: ${{ secrets.PRIVATE_SSH_KEY }}
             port: 22
             script: |
               cd ci-cd
               git pull origin main
-              ~/npm install
+              npm install
               npm run build
-          
-              pm2 restart ci-cd
+              npm run start
               
             
