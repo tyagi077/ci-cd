@@ -17,12 +17,11 @@ jobs:
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1
         with:
-          host: 16.171.200.47
+          host: 13.48.203.65
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
             cd ci-cd
             git pull origin main
             npm install
